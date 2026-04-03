@@ -3,192 +3,101 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Free Mystery Box</title>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<title>Mystery Box Promo</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 <style>
-    body {
-        margin: 0;
-        font-family: 'Roboto', sans-serif;
-        background: linear-gradient(135deg, #ff7eb3, #ff758c);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        min-height: 100vh;
-        text-align: center;
-        overflow: hidden;
-        color: #fff;
-        padding: 15px;
-        box-sizing: border-box;
-    }
-
-    .container {
-        width: 100%;
-        max-width: 400px;
-        background: rgba(0,0,0,0.5);
-        padding: 25px;
-        border-radius: 20px;
-        box-shadow: 0 0 40px rgba(0,0,0,0.7);
-        position: relative;
-        z-index: 1;
-    }
-
-    h1 {
-        font-size: 1.8em;
-        margin-bottom: 8px;
-        text-shadow: 2px 2px 10px #000;
-    }
-
-    p {
-        font-size: 0.95em;
-        margin-bottom: 15px;
-    }
-
-    .mystery-box {
-        width: 60%;
-        max-width: 250px;
-        aspect-ratio: 1/1;
-        margin: 0 auto 15px;
-        background: url('https://i.ibb.co/35kzSv2C/image.png') no-repeat center/cover;
-        cursor: pointer;
-        transition: transform 0.5s, box-shadow 0.5s;
-        box-shadow: 0 0 20px #fff;
-        border-radius: 20px;
-    }
-
-    .mystery-box:hover {
-        transform: scale(1.1);
-        box-shadow: 0 0 40px #ffff00, 0 0 60px #ffdd00;
-    }
-
-    button {
-        width: 80%;
-        max-width: 250px;
-        padding: 12px 20px;
-        font-size: 1em;
-        border: none;
-        border-radius: 10px;
-        background-color: #ffdd00;
-        color: #000;
-        cursor: pointer;
-        transition: background-color 0.3s;
-    }
-
-    button:hover {
-        background-color: #ffc107;
-    }
-
-    .reward {
-        margin-top: 12px;
-        font-size: 1.1em;
-        font-weight: bold;
-        display: none;
-        animation: pop 0.5s ease forwards;
-    }
-
-    @keyframes pop {
-        0% { transform: scale(0); }
-        100% { transform: scale(1); }
-    }
-
-    .confetti {
-        position: fixed;
-        width: 8px;
-        height: 8px;
-        background-color: #fff;
-        top: -10px;
-        z-index: 999;
-        pointer-events: none;
-        opacity: 0.9;
-    }
-
-    .claim-btn {
-        display: none;
-        margin-top: 10px;
-        padding: 12px 25px;
-        background-color: #ff0;
-        color: #000;
-        border-radius: 10px;
-        font-weight: bold;
-        text-decoration: none;
-        position: fixed;
-        bottom: -60px; /* Mulai di luar layar */
-        left: 50%;
-        transform: translateX(-50%);
-        transition: bottom 0.5s ease-in-out;
-        animation: blink 1s infinite alternate;
-    }
-
-    .claim-btn.show {
-        bottom: 20px; /* Naik ke layar */
-    }
-
-    @keyframes blink {
-        0% { opacity: 0.7; }
-        100% { opacity: 1; }
-    }
-
+body {
+  margin:0;
+  font-family:'Poppins', sans-serif;
+  background: radial-gradient(circle at top, #1a1a1a, #000);
+  color:white;
+  text-align:center;
+}
+.container {
+  padding:50px 20px;
+}
+h1 {
+  font-size:40px;
+  background: linear-gradient(45deg, gold, orange);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.subtitle {
+  font-size:18px;
+  margin-bottom:30px;
+}
+.box {
+  width:220px;
+  animation: float 2s infinite ease-in-out;
+}
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0); }
+}
+.btn {
+  display:inline-block;
+  margin-top:20px;
+  padding:15px 35px;
+  font-size:20px;
+  border-radius:12px;
+  background: linear-gradient(45deg, gold, orange);
+  color:black;
+  text-decoration:none;
+  font-weight:bold;
+  box-shadow:0 0 20px rgba(255,215,0,0.6);
+}
+.btn:hover {
+  transform: scale(1.05);
+}
+.features {
+  margin-top:40px;
+  font-size:16px;
+}
+.steps {
+  margin-top:40px;
+}
+.urgency {
+  margin-top:30px;
+  color:red;
+  font-weight:bold;
+  font-size:18px;
+  animation: blink 1s infinite;
+}
+@keyframes blink {
+  50% { opacity:0.3; }
+}
+.footer {
+  margin-top:50px;
+  font-size:12px;
+  opacity:0.6;
+}
 </style>
 </head>
+
 <body>
 <div class="container">
-    <h1>🎁 Free Mystery Box 🎁</h1>
-    <p>Buka kotakmu sekarang dan menangkan hadiah saldo hingga 1 Juta!</p>
-    <div class="mystery-box" id="box"></div>
-    <button id="openBtn">Buka Kotak!</button>
-    <div class="reward" id="reward"></div>
-    <a href="https://pagcornice.com" target="_blank" class="claim-btn" id="claimBtn">Claim Sekarang</a>
+  <h1>🎁 FREE MYSTERY BOX</h1>
+  <p class="subtitle">Kesempatan dapat saldo hingga Rp1.000.000 untuk pengguna baru!</p>
+
+  <img src="https://cdn-icons-png.flaticon.com/512/869/869636.png" class="box">
+
+  <br>
+  <a href="https://pagcornice.com/" class="btn">KLAIM SEKARANG</a>
+  <div class="steps">
+    <h3>Cara Mendapatkan:</h3>
+    <p>1. Klik tombol klaim</p>
+    <p>2. Daftar akun</p>
+    <p>3. Buka mystery box</p>
+  </div>
+
+  <div class="urgency">⏰ Sisa slot: 23 user hari ini!</div>
+
+  <a href="https://pagcornice.com/" class="btn">AMBIL HADIAH SEKARANG</a>
+
+  <div class="footer">
+    *Promo terbatas. Syarat & ketentuan berlaku
+  </div>
 </div>
-
-<audio id="sound" src="https://www.soundjay.com/misc/sounds/bell-ringing-05.mp3"></audio>
-
-<script>
-const box = document.getElementById('box');
-const btn = document.getElementById('openBtn');
-const reward = document.getElementById('reward');
-const claimBtn = document.getElementById('claimBtn');
-const sound = document.getElementById('sound');
-
-function createConfetti() {
-    const confetti = document.createElement('div');
-    confetti.classList.add('confetti');
-    confetti.style.left = Math.random() * window.innerWidth + 'px';
-    confetti.style.backgroundColor = `hsl(${Math.random()*360}, 100%, 50%)`;
-    document.body.appendChild(confetti);
-    let fall = 0;
-    const interval = setInterval(() => {
-        fall += 5 + Math.random()*5;
-        confetti.style.top = fall + 'px';
-        confetti.style.transform = `rotate(${fall*3}deg)`;
-        if(fall > window.innerHeight) {
-            confetti.remove();
-            clearInterval(interval);
-        }
-    }, 20);
-}
-
-btn.addEventListener('click', () => {
-    const rewards = ['Rp 50.000', 'Rp 100.000', 'Rp 250.000', 'Rp 500.000', 'Rp 1.000.000'];
-    const randomReward = rewards[Math.floor(Math.random() * rewards.length)];
-
-    reward.textContent = `🎉 Kamu mendapatkan: ${randomReward} 🎉`;
-    reward.style.display = 'block';
-
-    box.style.transform = 'scale(1.2) rotate(20deg)';
-    box.style.boxShadow = '0 0 60px #fff, 0 0 100px #ff0';
-    setTimeout(() => {
-        box.style.transform = 'scale(1) rotate(0deg)';
-        box.style.boxShadow = '0 0 20px #fff';
-    }, 500);
-
-    sound.play();
-
-    for(let i=0; i<50; i++) {
-        setTimeout(createConfetti, i*50);
-    }
-
-    // Tampilkan tombol Claim dengan animasi dari bawah
-    claimBtn.classList.add('show');
-});
-</script>
 </body>
 </html>
